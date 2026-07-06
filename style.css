@@ -29,6 +29,7 @@ body{
     padding-top: 100px;
     position: relative;
     overflow: hidden;
+    border-radius: 15px;
 }
 
 /* text */
@@ -76,13 +77,24 @@ img.env-topFlap{
     transition: all 0s ease;
 }
 
-img.env-msg{
+.env-msg{
     transition: opacity 0s ease;
     width: 100%;
     opacity: 0;
     z-index: 10;
 
     transform: translateY(30%);
+}
+.msg-txt{
+    font-family: "Caveat", cursive;
+    font-size: 3em;
+    line-height: 1em;
+    font-weight: 700;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    padding: 1.3em 1.2em;
 }
 
 
@@ -105,12 +117,16 @@ img.env-msg{
     opacity: 1;
     transition-delay: 0.3s;
 
-    transform: translateY(-2%);
+    transform: translateY(-40%);
 }
 
 @media (max-width:767px){
     .top-txt,
     .bottom-txt{
         font-size: 1.5em;
+    }
+    .msg-txt{
+        padding: 1em;
+        font-size: 1.8em;
     }
 }
