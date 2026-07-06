@@ -96,7 +96,9 @@ img.env-topFlap{
     left: 0;
     padding: 1.3em 1.2em;
 }
-
+#dynamic-msg{
+    font-family: "Caveat", cursive;
+}
 
 /* Toggle Animation */
 .env-wrap:not(.active) .env-opend,
