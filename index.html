@@ -34,19 +34,13 @@
         </div>
     </div>
 
-    <script>
-        const messages = [
+<script>
+    const messages = [
         "It was always you.",
         "I would rather share one lifetime with you than face all the ages of this world alone.",
         "You make me want to be a better man.",
         "If you're a bird, I'm a bird.",
-        ”There\'s this girl,
-        <br>she\'s shorter than me,
-        <br>she has gorgeous eyes,
-        <br>she has a beautiful smile,
-        <br>she has pretty hair,
-        <br>she has a great personality,
-        <br>and she\'s reading this right now.”
+        "There's this girl,<br>she's shorter than me,<br>she has gorgeous eyes,<br>she has a beautiful smile,<br>she has pretty hair,<br>she has a great personality,<br>and she's reading this right now.",
         "Death cannot stop true love. All it can do is delay it for a while.",
         "I wish I had done everything on Earth with you.",
         "Love is the one thing we're capable of perceiving that transcends dimensions of time and space.",
@@ -73,22 +67,23 @@
         "I found home the day I found you.",
         "You were worth the wait.",
         "Every love story is beautiful, but ours is my favorite."
-        ];
+    ];
 
-        function setRandomMessage() {
+    function setRandomMessage() {
         const msgElement = document.querySelector('#dynamic-msg');
         const randomIndex = Math.floor(Math.random() * messages.length);
-        msgElement.textContent = messages[randomIndex];
-        }
+        msgElement.innerHTML = messages[randomIndex]; 
+    }
 
-        // Set random text on page load
-        setRandomMessage();
+    // Set random text on page load
+    setRandomMessage();
 
-        // Toggle class and change text on click
-        document.querySelector('.env-wrap').addEventListener('click', function() {
+    // Toggle class and change text on click
+    document.querySelector('.env-wrap').addEventListener('click', function() {
         this.classList.toggle('active');
         setRandomMessage();
-        });
-    </script>
+    });
+</script>
+
 </body>
 </html>
